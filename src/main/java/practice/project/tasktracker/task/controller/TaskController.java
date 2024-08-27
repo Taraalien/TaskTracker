@@ -3,11 +3,9 @@ package practice.project.tasktracker.task.controller;
 
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import practice.project.tasktracker.task.entity.dto.TaskDto;
 import practice.project.tasktracker.task.entity.Task;
+import practice.project.tasktracker.task.entity.dto.TaskDto;
 import practice.project.tasktracker.task.service.TaskService;
-
-import static org.springframework.http.HttpStatus.*;
 
 @RestController
 @RequestMapping("api/tasks")
