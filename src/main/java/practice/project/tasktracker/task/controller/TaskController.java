@@ -17,11 +17,13 @@ public class TaskController {
 
 
     @PostMapping("addTask")
+    @ResponseStatus(CREATED)
     public Task addTask(@RequestBody TaskDto taskDto){
         return taskService.addTask(taskDto);
     }
 
     @PutMapping("updateTask/{id}")
+    @ResponseStatus(OK)
     public void updateTask(@PathVariable Long id,@RequestBody TaskDto taskDto){
         taskService.updateTask(id,taskDto);
     }
