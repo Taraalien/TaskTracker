@@ -21,6 +21,7 @@ public class TaskImpl implements TaskService {
     private final TaskRepository taskRepository;
 
     @Override
+    @Transactional
     public Task addTask(TaskDto taskDto) {
         Task task=taskMapper.toTaskEntity(taskDto);
         return taskRepository.save(task);
